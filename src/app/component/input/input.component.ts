@@ -14,8 +14,8 @@ export class InputComponent implements OnInit {
   ngOnInit() {
   }
 
-  onKeyPrinciple(event: any): void {
-    this.calculatorService.setPrinciple(parseInt(event.target.value)).then(() => {
+  onKeyPrincipal(event: any): void {
+    this.calculatorService.setPrincipal(parseInt(event.target.value)).then(() => {
       this.calculatorService.calculate();
     });
   }

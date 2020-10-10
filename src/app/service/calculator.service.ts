@@ -13,7 +13,7 @@ export class CalculatorService {
   private offset: number = 0;
   private interest_rate: number = 0;
   private iterations: number = 0;
-  private principle: number = 0;
+  private principal: number = 0;
 
   constructor() { }
 
@@ -32,8 +32,8 @@ export class CalculatorService {
     return;
   }
 
-  public async setPrinciple(principle: number): Promise<any> {
-    this.principle = principle;
+  public async setPrincipal(principal: number): Promise<any> {
+    this.principal = principal;
     return;
   }
 
@@ -44,12 +44,12 @@ export class CalculatorService {
 
   public calculate(): void {
     var results: Result[] = [];
-    var amount = this.principle;
+    var amount = this.principal;
 
     for (var iteration: number = 0; iteration < this.iterations; iteration++) {
       var amount: number = (amount + this.contribution) * (1 + (this.interest_rate * 0.01));
 
-      const last_result: Result = results.length ? results[results.length - 1] : {iteration: 0, iteration_deposit: 0, iteration_interest: 0, total_deposit: 0, total_interest: 0, balance: this.principle, offset: 0};
+      const last_result: Result = results.length ? results[results.length - 1] : {iteration: 0, iteration_deposit: 0, iteration_interest: 0, total_deposit: 0, total_interest: 0, balance: this.principal, offset: 0};
 
       var result: Result = {
         iteration: iteration + 1,
