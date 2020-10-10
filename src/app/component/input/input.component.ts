@@ -15,22 +15,26 @@ export class InputComponent implements OnInit {
   }
 
   onKeyPrinciple(event: any): void {
-    this.calculatorService.setPrinciple(event.target.value);
-    this.calculatorService.calculate();
+    this.calculatorService.setPrinciple(parseInt(event.target.value)).then(() => {
+      this.calculatorService.calculate();
+    });
   }
 
   onKeyContribution(event: any): void {
-    this.calculatorService.setPrinciple(event.target.value);
-    this.calculatorService.calculate();
+    this.calculatorService.setContribution(parseInt(event.target.value) * 12).then(() => {
+      this.calculatorService.calculate();
+    });
   }
 
   onKeyInterestRate(event: any): void {
-    this.calculatorService.setPrinciple(event.target.value);
-    this.calculatorService.calculate();
+    this.calculatorService.setInterestRate(parseInt(event.target.value)).then(() => {
+      this.calculatorService.calculate();
+    });
   }
 
   onKeyIterations(event: any): void {
-    this.calculatorService.setPrinciple(event.target.value);
-    this.calculatorService.calculate();
+    this.calculatorService.setIterations(parseInt(event.target.value)).then(() => {
+      this.calculatorService.calculate();
+    });
   }
 }

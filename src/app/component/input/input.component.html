@@ -4,18 +4,18 @@
         <mat-card-subtitle>Please complete</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <form class="example-form">
+        <form>
             <mat-form-field>
-                <input matInput placeholder="Principle" value="" autocomplete="off" (keyup)="onKeyPrinciple($event)">
+                <input matInput placeholder="Principle" value="" type="number" autocomplete="off" (input)="onKeyPrinciple($event)">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Contribution (Monthly)" value="" autocomplete="off" (keyup)="onKeyContribution($event)">
+                <input matInput placeholder="Contribution (Monthly)" value="" type="number" autocomplete="off" (input)="onKeyContribution($event)">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Interest Rate" value="" autocomplete="off" (keyup)="onKeyInterestRate($event)">
+                <input matInput placeholder="Interest Rate" value="" type="number" autocomplete="off" (input)="onKeyInterestRate($event)">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Iterations" value="" autocomplete="off" (keyup)="onKeyIterations($event)">
+                <input matInput placeholder="Iterations" value="" type="number" autocomplete="off" (input)="onKeyIterations($event)">
             </mat-form-field>
         </form>
     </mat-card-content>
