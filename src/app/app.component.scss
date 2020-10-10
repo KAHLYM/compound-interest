@@ -1,0 +1,15 @@
+.container {
+    min-height: calc(100vh - 40px);
+    padding-top: 40px;
+    display: flex;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.side {
+    position: absolute;
+    left: 820px;
+    display: block;
+    overflow: visible;
+    margin-top: 20px;
+}

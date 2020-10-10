@@ -1,0 +1,7 @@
+.input-card {
+    width: 200px;
+}
+
+::ng-deep .mat-card-header-text {
+    margin: 0 16px 0 0 !important;
+}
