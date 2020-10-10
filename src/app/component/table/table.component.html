@@ -6,6 +6,12 @@
         <td mat-cell *matCellDef="let element"> {{element.iteration}} </td>
     </ng-container>
 
+    <!-- Iterations Offset Column -->
+    <ng-container matColumnDef="offset">
+        <th mat-header-cell *matHeaderCellDef> Offset </th>
+        <td mat-cell *matCellDef="let element"> {{element.offset}} </td>
+    </ng-container>
+
     <!-- Yearly Interest Column -->
     <ng-container matColumnDef="yearlyInterest">
         <th mat-header-cell *matHeaderCellDef> Yearly Interest </th>

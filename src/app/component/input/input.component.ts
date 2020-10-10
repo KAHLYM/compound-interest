@@ -9,7 +9,7 @@ import { CalculatorService } from 'src/app/service/calculator.service';
 export class InputComponent implements OnInit {
 
   constructor(
-    public calculatorService: CalculatorService) {}
+    public calculatorService: CalculatorService) { }
 
   ngOnInit() {
   }
@@ -34,6 +34,12 @@ export class InputComponent implements OnInit {
 
   onKeyIterations(event: any): void {
     this.calculatorService.setIterations(parseInt(event.target.value)).then(() => {
+      this.calculatorService.calculate();
+    });
+  }
+
+  onKeyOffset(event: any): void {
+    this.calculatorService.setOffset(parseInt(event.target.value)).then(() => {
       this.calculatorService.calculate();
     });
   }

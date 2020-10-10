@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class TableComponent implements OnInit, OnDestroy {
 
-  displayedColumns: string[] = ['iteration', 'yearlyInterest', 'totalInterest', 'totalDeposit', 'balance'];
+  displayedColumns: string[] = ['iteration', 'offset', 'yearlyInterest', 'totalInterest', 'totalDeposit', 'balance'];
   dataSource: MatTableDataSource<Result> = new MatTableDataSource<Result>();
 
   subscriptionGetResults: Subscription;

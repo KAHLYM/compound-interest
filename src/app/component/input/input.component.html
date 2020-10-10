@@ -1,7 +1,6 @@
 <mat-card class="input-card">
     <mat-card-header>
         <mat-card-title>Input</mat-card-title>
-        <mat-card-subtitle>Please complete</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <form>
@@ -16,6 +15,9 @@
             </mat-form-field>
             <mat-form-field>
                 <input matInput placeholder="Iterations" value="" type="number" autocomplete="off" (input)="onKeyIterations($event)">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Iteration (Offset)" value="" type="number" autocomplete="off" (input)="onKeyOffset($event)">
             </mat-form-field>
         </form>
     </mat-card-content>

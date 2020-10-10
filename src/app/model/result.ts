@@ -5,4 +5,5 @@ export interface Result {
     total_deposit: number;
     total_interest: number;
     balance: number;
+    offset: number;
 }
