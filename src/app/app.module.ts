@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular Material
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Project Components
@@ -17,12 +18,14 @@ import { ToolbarComponent } from './component/toolbar/toolbar.component';
 
 // Project Services
 import { CalculatorService } from './service/calculator.service';
+import { TableComponent } from './component/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    InputComponent
+    InputComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { CalculatorService } from './service/calculator.service';
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
+    MatTableModule,
     MatToolbarModule,
   ],
   providers: [

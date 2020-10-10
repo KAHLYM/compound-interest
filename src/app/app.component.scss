@@ -6,10 +6,17 @@
     width: 800px;
 }
 
+.center {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .side {
-    position: absolute;
-    left: 820px;
+    position: fixed;
+    left: calc(50% + 420px);
     display: block;
     overflow: visible;
     margin-top: 20px;
+    margin-left: 20px;
 }

@@ -1,0 +1,24 @@
+.mat-column-iteration {
+    min-width: 50px !important;
+}
+
+.mat-column-yearlyInterest,
+.mat-column-totalInterest,
+.mat-column-totalDeposit,
+.mat-column-balance {
+    min-width: 100px !important;
+}
+
+.mat-column-noIteration {
+    text-align: center;
+    color: rgba(0,0,0,.54);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mat-cell,
+.mat-header-cell {
+    text-align: right !important;
+    padding-left: 0px !important;
+    padding-right: 48px !important;
+}
