@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
+import { CalculatorService } from './service/calculator.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ToolbarComponent } from './component/toolbar/toolbar.component';
     AppRoutingModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    CalculatorService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
