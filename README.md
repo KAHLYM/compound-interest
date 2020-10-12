@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Calculation Method
 
-### Input variables
+### Input
 
 | Name                   | Description                                                                                                                         |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,3 +22,16 @@ The amount is calculated through incremental interation that uses the previous a
         var amount: number = (amount + this.contribution) * (1 + (this.interest_rate * 0.01));
 
 see [calculator.service.ts](https://github.com/KAHLYM/compound-interest/blob/main/src/app/service/calculator.service.ts)
+
+### Output
+
+* Year
+* Offset
+* Yearly Interest
+* Total Interest
+* Total Deposits
+* Balance
+
+## Export to CSV
+
+There exists the ability to export the tabulated results to a CSV file through the menu (located in the top-right of the Tabulated Results card).
