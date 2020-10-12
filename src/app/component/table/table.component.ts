@@ -29,4 +29,23 @@ export class TableComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscriptionGetResults.unsubscribe();
   }
+
+  exportCSV(): void {
+
+    const header = this.displayedColumns.join(',')
+    const data = this.dataSource.data.map(e => [e.iteration, e.offset, e.iteration_interest, e.total_interest, e.total_deposit, e.balance].join(",")).join("\n");
+
+    const csv = header + '\n' + data;
+
+    const a = document.createElement('a');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+
+    a.href = url;
+    a.download = 'compound_interest_' + (Math.floor(Date.now() / 1000)) + '.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+    a.remove();
+
+  }
 }
