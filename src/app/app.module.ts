@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Project Components
@@ -40,6 +41,7 @@ import { TableComponent } from './component/table/table.component';
     MatInputModule,
     MatMenuModule,
     MatTableModule,
+    MatTabsModule,
     MatToolbarModule,
   ],
   providers: [

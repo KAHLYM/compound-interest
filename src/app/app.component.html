@@ -1,9 +1,17 @@
 <app-toolbar></app-toolbar>
-<div class="container">
-    <div class="center">
-        <app-table></app-table>
-    </div>
-    <div class="side">
-        <app-input></app-input>
-    </div>
-</div>
+<mat-tab-group class="tabGroup" mat-align-tabs="center" animationDuration="0ms">
+
+    <mat-tab label="Static">
+        <div class="container">
+            <div class="center">
+                <app-table></app-table>
+            </div>
+            <div class="side">
+                <app-input></app-input>
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Variable"> Content 2 </mat-tab>
+
+</mat-tab-group>
