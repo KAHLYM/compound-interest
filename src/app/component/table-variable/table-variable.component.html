@@ -1,0 +1,83 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Tabulated Results</mat-card-title>
+        <div class="card-spacer"></div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" id="tableMenuButton">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="exportCSV()">
+                <mat-icon>import_export</mat-icon>
+                <span>export to csv</span>
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+
+        <table mat-table [dataSource]="dataSource">
+
+            <!-- Iteration Column -->
+            <ng-container matColumnDef="iteration">
+                <th mat-header-cell *matHeaderCellDef> Year </th>
+                <td mat-cell *matCellDef="let element"> {{element.iteration}} </td>
+            </ng-container>
+
+            <!-- Iterations Offset Column -->
+            <ng-container matColumnDef="offset">
+                <th mat-header-cell *matHeaderCellDef> Offset </th>
+                <td mat-cell *matCellDef="let element"> {{element.offset}} </td>
+            </ng-container>
+
+            <!-- Yearly Interest Column -->
+            <ng-container matColumnDef="yearlyInterest">
+                <th mat-header-cell *matHeaderCellDef> Yearly Interest </th>
+                <td mat-cell *matCellDef="let element"> {{element.iteration_interest | number:'.2-2'}} </td>
+            </ng-container>
+
+            <!-- Total Interest Column -->
+            <ng-container matColumnDef="totalInterest">
+                <th mat-header-cell *matHeaderCellDef> Total Interest </th>
+                <td mat-cell *matCellDef="let element"> {{element.total_interest | number:'.2-2'}} </td>
+            </ng-container>
+
+            <!-- Total Deposits Column -->
+            <ng-container matColumnDef="totalDeposit">
+                <th mat-header-cell *matHeaderCellDef> Total Deposits </th>
+                <td mat-cell *matCellDef="let element"> {{element.total_deposit | number:'.2-2'}} </td>
+            </ng-container>
+
+            <!-- Balance Column -->
+            <ng-container matColumnDef="balance">
+                <th mat-header-cell *matHeaderCellDef> Balance </th>
+                <td mat-cell *matCellDef="let element"> {{element.balance | number:'.2-2'}} </td>
+            </ng-container>
+
+            <!-- Interest Rate Column -->
+            <ng-container matColumnDef="interestRate">
+                <th mat-header-cell *matHeaderCellDef> Interest Rate </th>
+                <td mat-cell *matCellDef="let element; let i = index">
+                    <input class="tableVariableInput" value="{{element.interest_rate}}" (keyup.enter)="UpdateInterestRate($event, i)">
+                </td>
+            </ng-container>
+
+            <!-- Yearly Deposit Column -->
+            <ng-container matColumnDef="yearlyDeposit">
+                <th mat-header-cell *matHeaderCellDef> Yearly Deposit </th>
+                <td mat-cell *matCellDef="let element; let i = index">
+                    <input class="tableVariableInput" value="{{element.iteration_deposit}}" (keyup.enter)="UpdateYearlyDeposit($event, i)">
+                </td>
+            </ng-container>
+
+            <!-- Actions  -->
+            <ng-container matColumnDef="actions">
+                <td mat-footer-cell *matFooterCellDef [attr.colspan]="displayedColumns.length">
+                    <button mat-button (click)="AddIteration()">click to add iteration</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-footer-row *matFooterRowDef="['actions']"></tr>
+        </table>
+    </mat-card-content>
+</mat-card>

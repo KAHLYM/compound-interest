@@ -1,0 +1,62 @@
+@import '../../../styles.scss';
+
+.mat-column-iteration,
+.mat-column-offset {
+    min-width: 50px !important;
+}
+
+.mat-column-yearlyInterest,
+.mat-column-totalInterest,
+.mat-column-totalDeposit,
+.mat-column-balance,
+.mat-column-interestRate,
+.mat-column-yearlyDeposit {
+    min-width: 100px !important;
+}
+
+.mat-column-actions {
+    text-align: center;
+    color: rgba(0,0,0,.54);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mat-column-actions button {
+    font-size: 12px !important;
+}
+
+.mat-cell,
+.mat-header-cell {
+    text-align: right !important;
+    padding-left: 0px !important;
+    padding-right: 48px !important;
+}
+
+.mat-row:hover {
+    background-color: rgba(0, 0, 0, .04);
+}
+
+.tableVariableInput {
+    background-color: rgba($primary, 0.1);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 6px;
+    border: none;
+}
+
+.tableVariableInput:focus {
+    outline: none;
+}
+
+#tableMenuButton {
+    font-size: 20px;
+}
+
+.card-spacer {
+    flex: 1 1 auto;
+}
+
+.tableVariableInput {
+    width: 90px;
+}

@@ -23,13 +23,15 @@ import { ToolbarComponent } from './component/toolbar/toolbar.component';
 // Project Services
 import { CalculatorService } from './service/calculator.service';
 import { TableComponent } from './component/table/table.component';
+import { TableVariableComponent } from './component/table-variable/table-variable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     InputComponent,
-    TableComponent
+    TableComponent,
+    TableVariableComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 export interface Result {
+    interest_rate?: number;
     iteration: number;
     iteration_deposit: number;
     iteration_interest: number;
