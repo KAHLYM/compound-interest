@@ -14,9 +14,18 @@
     min-width: 100px !important;
 }
 
+.mat-column-remove {
+    min-width: 50px !important;
+    padding-right: 0px !important;
+}
+
+.mat-column-remove .mat-icon-button {
+    opacity: .54;
+}
+
 .mat-column-actions {
     text-align: center;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
     font-size: 12px;
     font-weight: 500;
 }
@@ -25,8 +34,8 @@
     font-size: 12px !important;
 }
 
-.mat-cell,
-.mat-header-cell {
+.mat-cell:not(.mat-column-remove),
+.mat-header-cell:not(.mat-column-remove) {
     text-align: right !important;
     padding-left: 0px !important;
     padding-right: 48px !important;
@@ -37,7 +46,7 @@
 }
 
 .tableVariableInput {
-    background-color: rgba($primary, 0.1);
+    background-color: rgba($primary, .1);
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 14px;
     text-align: right;
@@ -51,6 +60,7 @@
 
 #tableMenuButton {
     font-size: 20px;
+    margin-right: 10px;
 }
 
 .card-spacer {

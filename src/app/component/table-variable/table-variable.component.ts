@@ -9,7 +9,7 @@ import { Result } from 'src/app/model/result';
 })
 export class TableVariableComponent implements OnInit {
 
-  displayedColumns: string[] = ['iteration', 'offset', 'yearlyInterest', 'totalInterest', 'totalDeposit', 'balance', 'interestRate', 'yearlyDeposit'];
+  displayedColumns: string[] = ['iteration', 'offset', 'yearlyInterest', 'totalInterest', 'totalDeposit', 'balance', 'interestRate', 'yearlyDeposit', 'remove'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   offset: number = 0;
@@ -59,7 +59,7 @@ export class TableVariableComponent implements OnInit {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
   }
 
-  exportCSV(): void {
+  ExportCSV(): void {
 
     const header = this.displayedColumns.join(',')
     const data = this.dataSource.data.map(e => [e.iteration, e.offset, e.iteration_interest, e.total_interest, e.total_deposit, e.balance].join(",")).join("\n");
@@ -75,7 +75,14 @@ export class TableVariableComponent implements OnInit {
     a.click();
     window.URL.revokeObjectURL(url);
     a.remove();
+  }
 
+  Remove(event, index: number): void {
+    ELEMENT_DATA.splice(index, 1); 
+
+    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+    this.Update();
   }
 
 }
