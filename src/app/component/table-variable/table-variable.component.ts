@@ -26,13 +26,19 @@ export class TableVariableComponent implements OnInit {
   }
 
   UpdateInterestRate(event, index: number): void {
+    if (event.target.value == "") {
+      event.target.value = "0.00";
+    }
+
     ELEMENT_DATA[index].interest_rate = parseInt(event.target.value);
-    this.Update();
   }
 
   UpdateYearlyDeposit(event, index: number): void {
+    if (event.target.value == "") {
+      event.target.value = "0.00";
+    }
+
     ELEMENT_DATA[index].iteration_deposit = parseInt(event.target.value);
-    this.Update();
   }
 
   Update(): void {
@@ -83,6 +89,10 @@ export class TableVariableComponent implements OnInit {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
 
     this.Update();
+  }
+
+  OnFocus(event): void {
+    event.target.select();
   }
 
 }
